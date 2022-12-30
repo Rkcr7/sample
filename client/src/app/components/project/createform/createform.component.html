@@ -1,0 +1,108 @@
+<div  id="create_project" role="dialog" class="modal custom-modal fade show" aria-modal="true" style="padding-right: 17px; display: block;">
+  <div  role="document" class="modal-dialog modal-dialog-centered modal-lg">
+    <div  class="modal-content">
+      <div  class="modal-header">
+        <h5  class="modal-title">Create Project</h5><button  type="button" data-dismiss="modal" aria-label="Close" class="close" mat-dialog-close><span  aria-hidden="true">×</span></button>
+      </div>
+      <div  class="modal-body">
+        <form  novalidate="" class="ng-untouched ng-pristine ng-invalid">
+          <div  class="row">
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Project Name</label><input  type="text" formcontrolname="projectName" class="form-control ng-untouched ng-pristine ng-invalid">
+                <!---->
+              </div>
+            </div>
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Client</label><select  class="select form-control">
+                  <option >Amazon</option>
+                  <option >Infosys</option>
+                  <option >Google</option>
+                  <option >Deloit</option>
+                </select></div>
+            </div>
+          </div>
+          <div  class="row">
+            <div  class="col-sm-6">
+            <div  class="form-group">
+              <label >Start Date</label>
+
+                <!-- <div  class="cal-icon"><input    matInput [matDatepicker]="picker" formcontrolname="projectStartDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid">
+
+                   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+
+
+
+                  <mat-datepicker #picker></mat-datepicker>
+
+                </div> -->
+                <input matInput [matDatepicker]="picker" formcontrolname="JoinDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+
+                <mat-datepicker #picker></mat-datepicker>
+
+                </div>
+
+            </div>
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >End Date</label>
+                <!-- <div  class="cal-icon"><input  type="text" bsdatepicker="" formcontrolname="projectEndDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid"> -->
+                  <input matInput [matDatepicker]="picker1" formcontrolname="projectEndDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid">
+                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+
+                  <mat-datepicker #picker1></mat-datepicker>
+
+                </div>
+
+              </div>
+            </div>
+
+          <div  class="row">
+            <div  class="col-sm-3">
+              <div  class="form-group"><label >Rate</label><input  placeholder="$50" type="text" class="form-control"></div>
+            </div>
+            <div  class="col-sm-3">
+              <div  class="form-group"><label >&nbsp;</label><select  class="select form-control">
+                  <option >Hourly</option>
+                  <option >Fixed</option>
+                </select></div>
+            </div>
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Priority</label><select  formcontrolname="projectPriority" class="select form-control ng-untouched ng-pristine ng-invalid">
+                  <option >High</option>
+                  <option >Medium</option>
+                  <option >Low</option>
+                </select></div>
+            </div>
+          </div>
+          <div  class="row">
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Add Project Leader</label><input  type="text" formcontrolname="projectLeader" class="form-control ng-untouched ng-pristine ng-invalid">
+                <!---->
+              </div>
+            </div>
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Team Leader</label>
+                <div  class="project-members"><a  data-toggle="tooltip" title="" class="avatar" data-original-title="Jeffery Lalor"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3WEmfJCME77ZGymWrlJkXRv5bWg9QQmQEzw&usqp=CAU" alt=""></a></div>
+              </div>
+            </div>
+          </div>
+          <div  class="row">
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Add Team</label><input  type="text" formcontrolname="addTeamMembers" class="form-control ng-untouched ng-pristine ng-invalid"></div>
+            </div>
+            <div  class="col-sm-6">
+              <div  class="form-group"><label >Team Members</label>
+                <div  class="project-members"><a  data-toggle="tooltip" title="" class="avatar" data-original-title="John Doe"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5S7x-uPyVGyBxjUf5jqXgtILiU-6nprBTDw&usqp=CAU" alt=""></a><a  data-toggle="tooltip" title="" class="avatar" data-original-title="Richard Miles"><img  src="https://thumbs.dreamstime.com/z/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg" alt=""></a><a  data-toggle="tooltip" title="" class="avatar" data-original-title="John Smith"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8mNnPRX5Jwpaxcv-baz35KyFZ_A8pzW585zoxkvMecl8bQi4OB2xVQtiyOG5jZr2jtic&usqp=CAU" alt=""></a><a  data-toggle="tooltip" title="" class="avatar" data-original-title="Mike Litorus"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQ-YHX2i3RvTDDmpfnde4qyb2P8up7Wi3Ww&usqp=CAU" alt=""></a><span  class="all-team">+2</span></div>
+              </div>
+            </div>
+          </div>
+          <div  class="form-group"><label >Description</label><textarea  rows="4" placeholder="Enter your message here" formcontrolname="projectDescription" class="form-control summernote ng-untouched ng-pristine ng-invalid"></textarea>
+            <!---->
+          </div>
+          <div  class="form-group"><label >Upload Files</label><input  type="file" class="form-control"></div>
+          <div  class="submit-section"><button  class="btn btn-primary submit-btn">Submit</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

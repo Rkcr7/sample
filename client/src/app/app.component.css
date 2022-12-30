@@ -1,0 +1,59 @@
+main {
+  left: 0;
+  margin-left: 230px;
+  padding-top: 60px;
+  transition: all 0.2s ease-in-out;
+}
+
+main > .content {
+  padding: 30px;
+}
+
+app-sidenav {
+  position: fixed;
+  left: 0rem;
+  width: 75px;
+  height: 1030px;
+  box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.74);
+  background-color: rgb(236, 236, 236);
+  border-top: 1.5px solid rgb(16, 16, 16);
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: width 250ms ease-in;
+  z-index: 2;
+  background-color: #34444c;
+  border-right: 1px solid transparent;
+}
+
+app-sidenav:hover {
+  width: 230px;
+  position: fixed;
+}
+
+app-sidenav:hover .display-area-shrink {
+  width: calc(100% - 230px);
+  left: 230px;
+}
+
+ngx-ui-loader-configuration {
+  fgsColor: linear-gradient(90deg, hsl(194, 66%, 46%) 0%, #daae51 100%);
+}
+.display-area {
+  position: absolute;
+  left: 75px;
+  width: calc(100% - 75px);
+  transition: left 250ms ease-in, width 250ms ease-in;
+  padding-top: 1rem !important;
+}
+
+.app-side-nav-open {
+  width: 230px;
+  position: fixed;
+}
+
+.display-area-shrink {
+  width: calc(100% - 230px);
+  left: 230px;
+}

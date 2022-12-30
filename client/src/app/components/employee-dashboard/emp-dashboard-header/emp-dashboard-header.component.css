@@ -1,0 +1,26 @@
+#container {
+  max-height: max-content;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+}
+
+img {
+  height: 70px;
+  width: 75px;
+  border-radius: 15%;
+  margin: 20px;
+}
+
+#intro-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#intro-content > * {
+  margin: 0%;
+}
+
+h2 {
+  color: lightslategrey;
+}

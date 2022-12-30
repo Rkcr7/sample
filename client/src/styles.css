@@ -1,0 +1,44 @@
+body {
+  font-size: 0.9375rem;
+  color: #1f1f1f;
+  background-color: #f7f7f7;
+  min-height: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0 !important;
+  font-weight: 500 !important;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+
+.login-page {
+     height: 100%;
+      background-repeat: no-repeat;
+
+
+    background: hsla(16, 100%, 76%, 1);
+
+background: linear-gradient(90deg, hsla(16, 100%, 76%, 1) 0%, hsla(49, 100%, 81%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(16, 100%, 76%, 1) 0%, hsla(49, 100%, 81%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(16, 100%, 76%, 1) 0%, hsla(49, 100%, 81%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA585", endColorstr="#FFEDA0", GradientType=1 );
+}

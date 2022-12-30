@@ -1,0 +1,617 @@
+<div class="container">
+  <div id="welcome"><b>Welcome Admin!</b></div>
+  <div id="section">Dashboard</div>
+
+  <div class="cards">
+
+    <mat-card class="card">
+      <div class="card-body">
+      <div class="widget-icon-body">
+        <mat-icon class="widget-icon">source</mat-icon>
+      </div>
+      <div class="widget-info">
+        <span class="value"><b>112</b></span>
+        <span class="data"><b>Projects</b></span>
+      </div>
+    </div>
+    </mat-card>
+
+    <mat-card class="card">
+      <div class="card-body">
+      <div class="widget-icon-body">
+        <mat-icon class="widget-icon">attach_money</mat-icon>
+      </div>
+      <div class="widget-info">
+        <span class="value"><b>44</b></span>
+        <span class="data"><b>Clients</b></span>
+      </div>
+    </div>
+    </mat-card>
+
+    <mat-card class="card">
+      <div class="card-body">
+      <div class="widget-icon-body">
+        <mat-icon class="widget-icon">diamond</mat-icon>
+      </div>
+      <div class="widget-info">
+        <span class="value"><b>37</b></span>
+        <span class="data"><b>Tasks</b></span>
+      </div>
+    </div>
+    </mat-card>
+
+    <mat-card class="card">
+      <div class="card-body">
+      <div class="widget-icon-body">
+        <mat-icon class="widget-icon">person</mat-icon>
+      </div>
+      <div class="widget-info">
+        <span class="value"><b>218</b></span>
+        <span class="data"><b>Employees</b></span>
+      </div>
+    </div>
+    </mat-card>
+
+  </div>
+
+  <div class="cards">
+
+    <mat-card class="bar-chart">
+      <div class="heading" ><b>Total Revenue</b></div>
+          <div>
+            <canvas style="display: inline-block;" baseChart height="200"
+              [data]="barChartData"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [type]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+          </canvas>
+      </div>
+
+    </mat-card>
+
+    <mat-card class="line-chart">
+      <div class="heading" ><b>Sales Overview</b></div>
+          <div>
+          <canvas style="display: inline-block;" baseChart height="200"
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            [type]="lineChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+          </div>
+    </mat-card>
+
+  </div>
+
+  <mat-card class="new-card">
+
+    <div class="section">
+      <div class="sec1">
+        <span>New Employees</span>
+        <span id="icon-onhold">+10%</span>
+      </div>
+      <div class="sec2"><b>10</b></div>
+      <div class="sec3">
+        <mat-progress-bar mode="determinate" value="80" ></mat-progress-bar>
+      </div>
+      <div class="sec4">
+        <span>OverAll Employees </span>
+        <span class="last text-muted">218</span>
+      </div>
+    </div>
+    <hr class="solid">
+
+    <div class="section">
+      <div class="sec1">
+        <span>Earnings</span>
+        <span id="icon-onhold">+12.5%</span>
+      </div>
+      <div class="sec2"><b>$1,42,300</b></div>
+      <div class="sec3">
+        <mat-progress-bar mode="determinate" value="80" ></mat-progress-bar>
+      </div>
+      <div class="sec4">
+        <span>Previous Month </span>
+        <span class="last text-muted">$1,15,852</span>
+      </div>
+    </div>
+    <hr class="solid">
+
+    <div class="section">
+      <div class="sec1">
+        <span>Expenses</span>
+        <span id="icon-pending">-2.8%</span>
+      </div>
+      <div class="sec2"><b>$8,500</b></div>
+      <div class="sec3">
+        <mat-progress-bar mode="determinate" value="80" ></mat-progress-bar>
+      </div>
+      <div class="sec4">
+        <span>Previous Month </span>
+        <span class="last text-muted">$7,500</span>
+      </div>
+    </div>
+    <hr class="solid">
+
+    <div class="section">
+      <div class="sec1">
+        <span>Profit</span>
+        <span id="icon-pending">-75%</span>
+      </div>
+      <div class="sec2"><b>$1,12,000</b></div>
+      <div class="sec3">
+        <mat-progress-bar mode="determinate" value="80" ></mat-progress-bar>
+      </div>
+      <div class="sec4">
+        <span>Previous Month </span>
+        <span class="last text-muted">$1,42,000</span>
+      </div>
+    </div>
+  </mat-card>
+
+  <div class="cards">
+    <mat-card class="card">
+      <div class="new-heading">Statistics</div>
+      <div class="new-section">
+        <div class="info">
+          <span>Today Leave</span>
+          <span><b>4/65</b></span>
+        </div>
+        <div class="sec3">
+          <mat-progress-bar mode="determinate" value="30" ></mat-progress-bar>
+        </div>
+      </div>
+
+      <div class="new-section">
+        <div class="info">
+          <span>Pending invoice</span>
+          <span><b>15/92</b></span>
+        </div>
+        <div class="progress sec3" style="height: 4px;">
+          <div class="progress-bar" id="two" role="progressbar" style="width: 30%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="new-section">
+        <div class="info">
+          <span>Completed Projects</span>
+          <span><b>85/112</b></span>
+        </div>
+        <div class="progress sec3" style="height: 4px;">
+          <div class="progress-bar" id="three" role="progressbar" style="width: 70%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="new-section">
+        <div class="info">
+          <span>Open Tickets</span>
+          <span><b>190/212</b></span>
+        </div>
+        <div class="progress sec3" style="height: 4px;">
+          <div class="progress-bar" id="four" role="progressbar" style="width: 70%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="new-section">
+        <div class="info">
+          <span>Closed Tickets</span>
+          <span><b>22/212</b></span>
+        </div>
+        <div class="progress sec3" style="height: 4px;">
+          <div class="progress-bar" id="five" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+    </mat-card>
+
+    <mat-card class="card">
+      <div class="new-heading">Task Statistics</div>
+
+      <div class="new-cards">
+        <div class="new-crd">
+          <div class="new-info">Total Tasks</div>
+          <div class="new-data"><b>385</b></div>
+
+        </div>
+
+        <div class="new-crd">
+          <div class="new-info">Overdue Tasks</div>
+          <div class="new-data"><b>19</b></div>
+        </div>
+
+      </div>
+
+      <div class="progress new-card" style="height: 20px;">
+        <div class="progress-bar" id="one" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">30%</div>
+        <div class="progress-bar" id="two" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">20%</div>
+        <div class="progress-bar" id="three" role="progressbar" style="width: 15%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">15%</div>
+        <div class="progress-bar" id="four" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">25%</div>
+        <div class="progress-bar" id="five" role="progressbar" style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">10%</div>
+      </div>
+
+    <div class="tasks">
+      <div class="task">
+        <span class="icon-wrap">
+          <mat-icon id="icon-complete">radio_button_checked</mat-icon>
+          <span class="icon-info">Completed Tasks</span>
+        </span>
+        <span><b>166</b></span>
+      </div>
+
+      <div class="task">
+        <span class="icon-wrap">
+          <mat-icon id="icon-inprogress">radio_button_checked</mat-icon>
+          <span class="icon-info">Inprogress Tasks</span>
+        </span>
+        <span><b>115</b></span>
+      </div>
+
+      <div class="task">
+        <span class="icon-wrap">
+          <mat-icon id="icon-onhold">radio_button_checked</mat-icon>
+          <span class="icon-info">On Hold Tasks</span>
+        </span>
+        <span><b>31</b></span>
+      </div>
+
+      <div class="task">
+        <span class="icon-wrap">
+          <mat-icon id="icon-pending">radio_button_checked</mat-icon>
+          <span class="icon-info">Pending Tasks</span>
+        </span>
+        <span><b>47</b></span>
+      </div>
+
+      <div class="task">
+        <span class="icon-wrap">
+          <mat-icon id="icon-review">radio_button_checked</mat-icon>
+          <span class="icon-info">Review Tasks</span>
+        </span>
+        <span><b>5</b></span>
+      </div>
+
+    </div>
+
+    </mat-card>
+
+    <mat-card class="card">
+      <div class="new-heading">Total Absent</div>
+      <div class="absent-body">
+        <div class="absent-card">
+          <div class="absent-person">
+            <span class="absent-img"><img mat-card-avatar src="data:image/jpeg;base64,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"></span>
+            <span class="absent-name"><b>Martin Lewis</b></span>
+          </div>
+          <div class="absent-info">
+            <span class="absent-date"><b>04 Sep 2019</b></span>
+            <span class="absent-leave">Leave Date</span>
+          </div>
+        </div>
+        <div class="absent-card">
+          <div class="absent-person">
+            <span class="absent-img"><img mat-card-avatar src="data:image/jpeg;base64,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"></span>
+            <span class="absent-name"><b>Martin Lewis</b></span>
+          </div>
+          <div class="absent-info">
+            <span class="absent-date"><b>04 Sep 2019</b></span>
+            <span class="absent-leave">Leave Date</span>
+          </div>
+        </div>
+        <button mat-stroked-button>Load More</button>
+      </div>
+
+    </mat-card>
+  </div>
+
+
+  <div class="cards">
+    <mat-card class="client-card">
+
+      <div class="card-header">
+        <b>Clients</b>
+      </div>
+
+      <div class="card-body clients">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th class="text-end">Action</th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="line prog">
+                    <div class="client-img">
+                      <img mat-card-avatar alt="" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="client">
+                      <span class="client-name">Daniel Deacon</span><br/>
+                      <span class="client-post text-muted">CEO</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="prog">barrycuda@example.com</td>
+                <td class="prog">
+                  <div class="dropdown action-label">
+                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-dot-circle-o text-success"></i> Active
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                    </div>
+                 </div>
+                </td>
+                <td class="action dropdown dropdown-action">
+                  <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="line prog">
+                    <div class="client-img">
+                      <img mat-card-avatar alt="" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="client">
+                      <span class="client-name">Tressa Wexler</span><br/>
+                      <span class="client-post text-muted">Manager</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="prog">tressawexler@example.com</td>
+                <td class="prog">
+                  <div class="dropdown action-label">
+                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                    </div>
+                 </div>
+                </td>
+                <td class="action dropdown dropdown-action">
+                  <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="line prog">
+                    <div class="client-img">
+                      <img mat-card-avatar alt="" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="client">
+                      <span class="client-name">Ruby Bartlett</span><br/>
+                      <span class="client-post text-muted">CEO</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="prog">rubybartlett@example.com</td>
+                <td class="prog">
+                  <div class="dropdown action-label">
+                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                    </div>
+                 </div>
+                </td>
+                <td class="action dropdown dropdown-action">
+                  <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="line prog">
+                    <div class="client-img">
+                      <img mat-card-avatar alt="" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="client">
+                      <span class="client-name">Misty Tison</span><br/>
+                      <span class="client-post text-muted">CEO</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="prog">mistytison@example.com</td>
+                <td class="prog">
+                  <div class="dropdown action-label">
+                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-dot-circle-o text-success"></i> Active
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                    </div>
+                 </div>
+                </td>
+                <td class="action dropdown dropdown-action">
+                  <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="line prog">
+                    <div class="client-img">
+                      <img mat-card-avatar alt="" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="client">
+                      <span class="client-name">Daniel Deacon</span><br/>
+                      <span class="client-post text-muted">CEO</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="prog">danieldeacon@example.com</td>
+                <td class="prog">
+                  <div class="dropdown action-label">
+                    <a class="btn btn-sm  dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                    </div>
+                 </div>
+                </td>
+                <td class="action dropdown dropdown-action">
+                  <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+
+      <div class="card-footer">
+        View all clients
+      </div>
+
+    </mat-card>
+
+
+    <mat-card class="client-card">
+      <div class="card-header">
+        <b>Recent Projects</b>
+      </div>
+
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Project Name</th>
+              <th scope="col">Progress</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="data project-name">Office Management</span><br/>
+                <small class="block text-ellipsis">
+                <span>1</span> <span class="text-muted"> open tasks, </span>
+                <span>9</span> <span class="text-muted"> tasks completed</span>
+                </small>
+              </td>
+              <td class="prog"><mat-progress-bar mode="determinate" value="40" ></mat-progress-bar></td>
+              <td class="action dropdown dropdown-action">
+                <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="data project-name">Project Management</span><br/>
+                <small class="block text-ellipsis">
+                <span>2</span> <span class="text-muted"> open tasks, </span>
+                <span>5</span> <span class="text-muted"> tasks completed</span>
+                </small>
+              </td>
+              <td class="prog"><mat-progress-bar mode="determinate" value="20" ></mat-progress-bar></td>
+              <td class="action dropdown dropdown-action">
+                <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                </div>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="data project-name">Video Calling app</span><br/>
+                <small class="block text-ellipsis">
+                <span>3</span> <span class="text-muted"> open tasks, </span>
+                <span>3</span> <span class="text-muted"> tasks completed</span>
+                </small>
+              </td>
+              <td class="prog"><mat-progress-bar mode="determinate" value="50" ></mat-progress-bar></td>
+              <td class="action dropdown dropdown-action">
+                <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                </div>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="data project-name">Hospital Administration</span><br/>
+                <small class="block text-ellipsis">
+                <span>12</span> <span class="text-muted"> open tasks, </span>
+                <span>4</span> <span class="text-muted"> tasks completed</span>
+                </small>
+              </td>
+              <td class="prog"><mat-progress-bar mode="determinate" value="90" ></mat-progress-bar></td>
+              <td class="action dropdown dropdown-action">
+                <button mat-icon-button data-bs-toggle="dropdown" aria-expanded="false"><mat-icon>more_vert</mat-icon></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                </div>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="data project-name">Digital Marketplace</span><br/>
+                <small class="block text-ellipsis">
+                <span>7</span> <span class="text-muted"> open tasks, </span>
+                <span>14</span> <span class="text-muted"> tasks completed</span>
+                </small>
+              </td>
+              <td class="prog"><mat-progress-bar mode="determinate" value="100" ></mat-progress-bar></td>
+              <td class="action dropdown dropdown-action">
+                  <button mat-icon-button data-bs-toggle="dropdown"><mat-icon>more_vert</mat-icon></button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                  </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="card-footer">
+         View all projects
+      </div>
+
+    </mat-card>
+  </div>
+  </div>
+
+
+

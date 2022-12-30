@@ -1,0 +1,16 @@
+<ngx-ui-loader></ngx-ui-loader>
+<div class="container-fluid g-0">
+  <div *ngIf="isLoggedIn "> <app-header (sideNavToggled)="!sideNavStatus = $event"></app-header>
+
+  <app-sidenav [sideNavStatus]="!sideNavStatus" [ngClass]="
+    {
+      'app-side-nav-open':!sideNavStatus
+    }">
+  </app-sidenav>
+</div>
+  <main style="min-height: 343px;">
+    <div class="content container-fluid display-area" [ngClass]="{'display-area-shrink':!sideNavStatus}">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,419 @@
+<div id="edit_employee" role="dialog" class="modal custom-modal fade show " style="padding-right: 17px; display: block;" aria-modal="true">
+    <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            Edit Employee
+          </h5>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close" mat-dialog-close>
+            <span aria-hidden="true">
+              ×
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form novalidate="" class="ng-untouched ng-pristine ng-invalid">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    First Name
+                    <span class="text-danger">
+                      *
+                    </span>
+                  </label>
+                  <input type="text" formcontrolname="FirstName" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Last Name
+                  </label>
+                  <input type="text" formcontrolname="LastName" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Username
+                    <span class="text-danger">
+                      *
+                    </span>
+                  </label>
+                  <input type="text" formcontrolname="UserName" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Email
+                    <span class="text-danger">
+                      *
+                    </span>
+                  </label>
+                  <input type="email" formcontrolname="Email" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Password
+                  </label>
+                  <input type="password" formcontrolname="Password" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Confirm Password
+                  </label>
+                  <input type="password" formcontrolname="ConfirmPassword" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label class="col-form-label">
+                  Employee ID
+                  <span class="text-danger">
+                    *
+                  </span>
+                </label>
+                <div class="form-group">
+  
+                  <input type="text" formcontrolname="EmployeeID" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div  class="col-sm-6">
+                <label  class="col-form-label">
+                  Joining Date
+                  <span  class="text-danger">
+                    *
+                  </span>
+                </label>
+                <div  class="form-group">
+  
+                  <div class="date_container">
+                    <!-- <input  type="text" bsdatepicker="" formcontrolname="JoinDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid"> -->
+  
+                    <input matInput [matDatepicker]="picker" formcontrolname="JoinDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  
+                    <mat-datepicker #picker></mat-datepicker>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Phone
+                  </label>
+                  <input type="text" formcontrolname="PhoneNumber" class="form-control ng-untouched ng-pristine ng-invalid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-form-label">
+                    Company
+                  </label>
+                  <select formcontrolname="CompanyName" class="select form-control ng-untouched ng-pristine ng-invalid">
+                    <option  value="">
+                      Select Company
+                    </option>
+                    <option  value="0">
+                      TekSystems Global Services Pvt. Ltd.
+                    </option>
+                    <option  value="1">
+                      Aerotek
+                    </option>
+                    <option  value="2">
+                      Allegis Group Limited
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>
+                    Department
+                    <span class="text-danger">
+                      *
+                    </span>
+                  </label>
+                  <select formcontrolname="DepartmentName" class="select form-control ng-untouched ng-pristine ng-invalid">
+                    <option>
+                      Select Department
+                    </option>
+                    <option >
+                      IT Services
+                    </option>
+                    <option >
+                      Talent Acquisition
+                    </option>
+                    <option >
+                      Marketing
+                    </option>
+                    <option >
+                      Risk & Security
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>
+                    Designation
+                    <span class="text-danger">
+                      *
+                    </span>
+                  </label>
+                  <select formcontrolname="Designation" class="select form-control ng-untouched ng-pristine ng-invalid">
+                    <option>
+                      Select Designation
+                    </option>
+                    <option >
+                      Intern
+                    </option>
+                    <option >
+                      Associate Engineer
+                    </option>
+                    <option >
+                      Software Engineer
+                    </option>
+                    <option >
+                      Module Lead
+                    </option>
+                    <option >
+                      Technical Lead
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive m-t-15">
+              <table class="table table-striped custom-table">
+                <thead>
+                  <tr>
+                    <th>
+                      Module Permission
+                    </th>
+                    <th class="text-center">
+                      Read
+                    </th>
+                    <th class="text-center">
+                      Write
+                    </th>
+                    <th class="text-center">
+                      Create
+                    </th>
+                    <th class="text-center">
+                      Delete
+                    </th>
+                    <th class="text-center">
+                      Import
+                    </th>
+                    <th class="text-center">
+                      Export
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Holidays
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Leaves
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Clients
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Projects
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Tasks
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Chats
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Assets
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Timing Sheets
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input checked="" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="submit-section">
+              <button type="submit" class="btn btn-primary submit-btn">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  

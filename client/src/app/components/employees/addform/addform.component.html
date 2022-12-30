@@ -1,0 +1,499 @@
+<div
+  id="add_employee"
+  role="dialog"
+  class="modal custom-modal fade show snipcss-sxI9L"
+  aria-modal="true"
+  style="padding-right: 17px; display: block"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Employee</h5>
+        <button
+          type="button"
+          data-dismiss="modal"
+          aria-label="Close"
+          class="close"
+          mat-dialog-close
+        >
+          <span aria-hidden="true"> × </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form
+          novalidate=""
+          class="ng-untouched ng-pristine ng-invalid"
+          [formGroup]="addform"
+          (ngSubmit)="addSubmitted()"
+        >
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label">
+                  First Name
+                  <span class="text-danger"> * </span>
+                </label>
+                <input
+                  type="text"
+                  formControlName="first_name"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Enter your name"
+                />
+                <div
+                  class="form-text text-danger"
+                  *ngIf="firstname.errors?.['required'] && ( firstname.touched || firstname.dirty)"
+                >
+                  Field Required
+                </div>
+                <div
+                  class="form-text text-danger"
+                  *ngIf="firstname.errors?.['pattern'] && ( firstname.touched || firstname.dirty)"
+                >
+                  Name should start with alphabet
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label"> Last Name </label>
+                <input
+                  type="text"
+                  formControlName="last_name"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Last name"
+                />
+                <div
+                  class="form-text text-danger"
+                  *ngIf="lastname.errors?.['pattern'] && ( lastname.touched || lastname.dirty)"
+                >
+                  Name should start with alphabet
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label">
+                  Username
+                  <span class="text-danger"> * </span>
+                </label>
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Enter your Username"
+                />
+                <div
+                  class="form-text text-danger"
+                  *ngIf="username.errors?.['required'] && ( username.touched || username.dirty)"
+                >
+                  Username is Required
+                </div>
+                <div
+                  class="form-text text-danger"
+                  *ngIf="username.errors?.['pattern'] && ( username.touched || username.dirty)"
+                >
+                  First letter should be alphabet
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label">
+                  display name
+                  <span class="text-danger"> * </span>
+                </label>
+                <input
+                  type="text"
+                  formControlName="display_name"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Enter your Display name"
+                />
+                <div
+                  class="form-text text-danger"
+                  *ngIf="displayname.errors?.['required'] && ( displayname.touched || displayname.dirty)"
+                >
+                  Display Name is Required
+                </div>
+                <div
+                  class="form-text text-danger"
+                  *ngIf="displayname.errors?.['pattern'] && ( displayname.touched || displayname.dirty)"
+                >
+                  Name should start with alphabet
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>
+                  Gender
+                  <span class="text-danger"> * </span>
+                </label>
+                <select
+                  formControlName="gender"
+                  class="select form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Select gender"
+                >
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label">
+                  Email
+                  <span class="text-danger"> * </span>
+                </label>
+                <input
+                  type="email"
+                  formControlName="email"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Enter your Email Id"
+                />
+                <div
+                  class="form-text text-danger"
+                  *ngIf="email.errors?.['required'] && (email.touched || email.dirty)"
+                >
+                  Email is Required
+                </div>
+                <div
+                  class="form-text text-danger"
+                  *ngIf="email.errors?.['email'] && (email.touched || email.dirty)"
+                >
+                  Email is Invalid
+                </div>
+              </div>
+            </div>
+            <!-- <div  class="col-sm-6">
+              <div  class="form-group">
+                <label  class="col-form-label">
+                  Password
+                </label>
+
+               <input  type="password" formControlName="password" class="form-control ng-untouched ng-pristine ng-invalid">
+
+              </div>
+            </div>
+            <div  class="col-sm-6">
+              <div  class="form-group">
+                <label  class="col-form-label">
+                  Confirm Password
+                </label>
+
+               <input  type="password" formcontrolname="ConfirmPassword" class="form-control ng-untouched ng-pristine ng-invalid">
+
+              </div>
+            </div> -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label">
+                  Employee ID
+                  <span class="text-danger"> * </span>
+                </label>
+                <input
+                  type="text"
+                  formControlName="employeeId"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  placeholder="Enter your Employee ID"
+                />
+                <div
+                  class="form-text text-danger"
+                  *ngIf="empid.errors?.['pattern'] && (empid.touched || empid.dirty)"
+                >
+                  Employee id Should be Integer only
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="col-form-label">
+                Joining Date
+                <span class="text-danger"> * </span>
+              </label>
+              <div class="form-group">
+                <div class="date_container">
+                  <!-- <input  type="text" bdatepicker="" formcontrolname="JoinDate" class="form-control datetimepicker ng-untouched ng-pristine ng-invalid"> -->
+
+                  <input
+                    matInput
+                    [matDatepicker]="picker"
+                    formControlName="joindate"
+                    [max]="today"
+                    class="form-control datetimepicker ng-untouched ng-pristine ng-invalid"
+                  />
+                  <mat-datepicker-toggle
+                    matSuffix
+                    [for]="picker"
+                  ></mat-datepicker-toggle>
+
+                  <mat-datepicker #picker></mat-datepicker>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label"> Phone </label>
+                <input
+                  type="text"
+                  formcontrolname="PhoneNumber"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-form-label"> Company </label>
+                <select
+                  formcontrolname="CompanyName"
+                  class="select form-control ng-untouched ng-pristine ng-invalid"
+                >
+                  <option value="">Select Company</option>
+                  <option value="0">
+                    TekSystems Global Services Pvt. Ltd.
+                  </option>
+                  <option value="1">Aerotek</option>
+                  <option value="2">Allegis Group Limited</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>
+                  Department
+                  <span class="text-danger"> * </span>
+                </label>
+                <select
+                  formcontrolname="DepartmentName"
+                  class="select form-control ng-untouched ng-pristine ng-invalid"
+                >
+                  <option>Select Department</option>
+                  <option>IT Services</option>
+                  <option>Talent Acquisition</option>
+                  <option>Marketing</option>
+                  <option>Risk & Security</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>
+                  Designation
+                  <span class="text-danger"> * </span>
+                </label>
+                <select
+                  formControlName="designation"
+                  class="select form-control ng-untouched ng-pristine ng-invalid"
+                >
+                  <option>Intern</option>
+                  <option>Associate Engineer</option>
+                  <option>Software Engineer</option>
+                  <option>Module Lead</option>
+                  <option>Technical Lead</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive m-t-15">
+            <table class="table table-striped custom-table">
+              <thead>
+                <tr>
+                  <th>Module Permission</th>
+                  <th class="text-center">Read</th>
+                  <th class="text-center">Write</th>
+                  <th class="text-center">Create</th>
+                  <th class="text-center">Delete</th>
+                  <th class="text-center">Import</th>
+                  <th class="text-center">Export</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Holidays</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Leaves</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Clients</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Projects</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tasks</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chats</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Assets</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Timing Sheets</td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input checked="" type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="submit-section">
+            <button
+              type="submit"
+              [disabled]="addform.invalid"
+              class="btn btn-primary submit-btn"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="alert alert-warning" *ngIf="addform && isSignUpFailed">
+            Add employee failed! User Already Exist<br />{{ errorMessage }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

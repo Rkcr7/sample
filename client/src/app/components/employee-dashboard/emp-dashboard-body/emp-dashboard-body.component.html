@@ -1,0 +1,124 @@
+<div id="container" >
+
+  <div id="div-left">
+
+    <h4>TODAY</h4>
+      <mat-card class="left-card">
+        <i class="fa-solid fa-cake-candles fa-xl"></i><span class="birthday" style="color:red">&nbsp; Today's Birthdays : &nbsp;</span>
+        <span style="color: red" *ngFor="let val of birth.values">  <span  class="birthday" style="color:red" *ngIf="val.test.length>=1">{{ val.test }}&nbsp; &nbsp; <img mat-card-avatar src={{val.test1}}> &nbsp; &nbsp;</span>
+
+        </span>
+
+      </mat-card>
+      <mat-card class="left-card">
+        <mat-icon>work_outline</mat-icon>
+        <p>You are on leave today</p>
+        <img mat-card-avatar src={{users.values[0].profile_image}}>
+      </mat-card>
+      <mat-card class="left-card">
+        <mat-icon>view_carousel</mat-icon>
+        <p>Anshika is working from home today</p>
+        <img mat-card-avatar src={{users.values[0].profile_image}}>
+      </mat-card>
+
+    <h4>TOMORROW</h4>
+      <mat-card class="left-card">
+        <mat-icon>card_travel</mat-icon>
+        <p>2 people will be away tomorrow</p>
+        <img mat-card-avatar src={{users.values[0].profile_image}}>
+      </mat-card>
+
+    <h4>NEXT SEVEN DAYS</h4>
+      <mat-card class="left-card">
+        <mat-icon>card_travel</mat-icon>
+        <p>2 people are going to be away</p>
+        <img mat-card-avatar src={{users.values[0].profile_image}}>
+      </mat-card>
+      <mat-card class="left-card">
+        <mat-icon>add</mat-icon>
+        <p>Team Offsite is planned for thursday</p>
+        <img mat-card-avatar src={{users.values[0].profile_image}}>
+      </mat-card>
+      <mat-card class="left-card">
+        <mat-icon>calendar_today</mat-icon>
+        <p class="card-details1">{{off.values[0].festival}}'s Holiday on {{off.values[0].fest_day}}</p>
+        <img mat-card-avatar src={{users.values[0].profile_image}}>
+      </mat-card>
+
+  </div>
+
+  <div id="div-right">
+
+    <h4>PROJECTS</h4>
+    <mat-card class="card">
+
+      <div class="upper-card">
+        <div class="upper-card1">
+          <span class="card-nums">{{users.values[0].completed_projects}}<br/></span>
+          <span class="card-details">COMPLETED TASKS</span>
+        </div>
+        <hr class="solid">
+        <div class="upper-card2">
+          <span class="card-nums">{{users.values[0].pending_projects}}<br/></span>
+          <span class="card-details">PENDING TASKS</span>
+        </div>
+      </div>
+
+      <div class="lower-card">
+        <span class="card-nums">{{users.values[0].total_projects}}<br/></span>
+          <span class="card-details">TOTAL TASKS</span>
+      </div>
+
+    </mat-card>
+
+    <h4>YOUR LEAVE</h4>
+    <mat-card class="card">
+
+      <div class="upper-card">
+        <div class="upper-card1">
+          <span class="card-nums">{{users.values[0].taken_leaves}}<br/></span>
+          <span class="card-details">TAKEN LEAVE</span>
+        </div>
+        <hr class="solid">
+        <div class="upper-card2">
+          <span class="card-nums">{{users.values[0].remaining_leaves}}<br/></span>
+          <span class="card-details">REMAINING</span>
+        </div>
+      </div>
+
+      <div class="lower-card">
+        <button mat-raised-button color="warn">Apply Leave</button>
+      </div>
+
+    </mat-card>
+
+    <h4>YOUR TIME OF ALLOWANCE</h4>
+    <mat-card class="card">
+
+      <div class="upper-card">
+        <div class="upper-card1">
+          <span class="card-nums">{{users.values[0].approved_allowance}}<br/></span>
+          <span class="card-details">APPROVED HOURS</span>
+        </div>
+        <hr class="solid">
+        <div class="upper-card2">
+          <span class="card-nums">{{users.values[0].remaining_allowance}}<br/></span>
+          <span class="card-details">REMAINING HOURS</span>
+        </div>
+      </div>
+
+      <div class="lower-card">
+        <button mat-raised-button color="warn">Apply Time Off</button>
+      </div>
+
+    </mat-card>
+
+    <h4>UPCOMING HOLIDAY</h4>
+    <mat-card class="card">
+      <div class="lower-card">
+        <span class="card-details">{{off.values[0].fest_date}} {{off.values[0].festival}}</span><br>
+
+      </div>
+    </mat-card>
+  </div>
+</div>

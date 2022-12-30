@@ -1,0 +1,41 @@
+<div class="side-nav-content">
+  <ul class="nav-list" [ngClass]="{ 'nav-list-open': !sideNavStatus }">
+    <div *ngIf="isadmin">
+      <li class="nav-list-item border=black">
+        <a routerLink="/admin-dashboard">
+          <i class="fa-solid fa-user-tie" style="color: white"></i
+        ></a>
+        <span>
+          <a routerLink="/admin-dashboard">Admin Dashboard</a>
+        </span>
+      </li>
+    </div>
+
+    <li class="nav-list-item border=black">
+      <a routerLink="/emp-dashboard">
+        <i class="fa fa-dashboard" style="color: white"></i
+      ></a>
+      <span>
+        <a routerLink="/emp-dashboard">Employee Dashboard</a>
+      </span>
+    </li>
+
+    <li class="nav-list-item border=black">
+      <a routerLink="employees-allemployees">
+        <i class="fa fa-users" style="color: white"> </i
+      ></a>
+      <span>
+        <a routerLink="employees-allemployees">Employees</a>
+      </span>
+    </li>
+
+    <li class="nav-list-item border=black">
+      <a routerLink="/projects">
+        <i class="fa-sharp fa-solid fa-file-powerpoint" style="color: white"></i
+      ></a>
+      <span>
+        <a routerLink="/projects">Projects</a>
+      </span>
+    </li>
+  </ul>
+</div>
